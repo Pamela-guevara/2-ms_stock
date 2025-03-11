@@ -32,6 +32,7 @@ class StockServices():
 
         logging.info(f'stock_{stock.id_stock} retrieved to cache')    
         return stock
+    
     # El siguiente método traerá el stock que esté relacionado con un product_id
     def find_by_product_id(self, id_product: int) -> Stock:
         stock = cache.get(f'stock_product_id_{id_product}')
